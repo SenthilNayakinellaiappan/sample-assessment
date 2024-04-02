@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the Maven project
-                bat "\"C:\\Windows\\System32\\cmd.exe\" /c mvn clean install"
+                bat 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
                 // Run tests
-                bat "\"C:\\Windows\\System32\\cmd.exe\" /c mvn test"
+                bat 'mvn test'
             }
         }
     }
@@ -23,3 +23,4 @@ pipeline {
         }
     }
 }
+
